@@ -39,9 +39,10 @@
 (defn- read-scale3-or-scale [{:keys [scale3 scale] :as _any-instance-desc}]
   ;; scale is the legacy uniform scale
   ;; check if scale3 has default value and if so, use legacy uniform scale
-  (if (and (protobuf/default-read-scale-value? scale3)
-           (some? scale)
-           (not (zero? scale)))
+  (if (and (some? scale)
+           (not (zero? scale))
+           (or (nil? scale3)
+               (protobuf/default-read-scale-value? scale3)))
     [scale scale scale]
     scale3))
 

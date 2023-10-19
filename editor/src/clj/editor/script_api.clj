@@ -154,4 +154,5 @@
     :search-value-fn r/search-value-fn
     :source-value-fn r/source-value-fn
     :textual? true
-    :language "yaml"))
+    :language "yaml"
+    :test-info {:type :code}))

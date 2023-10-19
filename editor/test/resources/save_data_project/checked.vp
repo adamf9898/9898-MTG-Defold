@@ -1,0 +1,15 @@
+uniform mediump mat4 viewproj;
+
+attribute mediump vec4 position;
+attribute mediump vec2 texcoord0;
+attribute lowp float texpage0;
+attribute mediump vec4 color0;
+
+varying mediump vec3 var_texcoord0;
+varying mediump vec4 var_color0;
+
+void main() {
+	gl_Position = viewproj * vec4(position.xyz, 1.0);
+	var_texcoord0 = vec3(texcoord0.xy, texpage0);
+	var_color0 = vec4(color0.rgb * color0.a, color0.a); // Premultiply with alpha.
+}

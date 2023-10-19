@@ -1,0 +1,20 @@
+key_trigger {
+  input: KEY_SPACE
+  action: "key_space"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "mouse_left"
+}
+gamepad_trigger {
+  input: GAMEPAD_START
+  action: "gamepad_start"
+}
+touch_trigger {
+  input: TOUCH_MULTI
+  action: "touch_multi"
+}
+text_trigger {
+  input: TEXT
+  action: "text_input"
+}

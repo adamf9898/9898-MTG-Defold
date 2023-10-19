@@ -281,7 +281,9 @@
                         :read-raw-fn read-raw-fn
                         :read-fn read-fn
                         :write-fn write-fn
-                        :search-fn search-fn))]
+                        :search-fn search-fn
+                        :test-info {:type :ddf
+                                    :ddf-type ddf-type}))]
     (apply workspace/register-resource-type workspace (mapcat identity args))))
 
 (defn register-settings-resource-type [workspace & {:keys [ext node-type load-fn meta-settings icon view-types tags tag-opts label] :as args}]
@@ -295,5 +297,7 @@
                :textual? true
                :read-fn read-fn
                :write-fn write-fn
-               :search-fn settings-core/raw-settings-search-fn)]
+               :search-fn settings-core/raw-settings-search-fn
+               :test-info {:type :settings
+                           :meta-settings meta-settings})]
     (apply workspace/register-resource-type workspace (mapcat identity args))))

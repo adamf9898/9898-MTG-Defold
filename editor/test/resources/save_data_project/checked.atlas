@@ -1,0 +1,40 @@
+images {
+  image: "/referenced/images/white.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/referenced/images/red.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/referenced/images/green.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/referenced/images/blue.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/referenced/images/diamond.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_4
+}
+animations {
+  id: "spinning"
+  images {
+    image: "/referenced/images/white.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/referenced/images/diamond.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_4
+  }
+  playback: PLAYBACK_LOOP_BACKWARD
+  fps: 24
+  flip_horizontal: 1
+  flip_vertical: 1
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0
+max_page_width: 4096
+max_page_height: 4096
